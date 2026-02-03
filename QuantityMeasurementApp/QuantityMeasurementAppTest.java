@@ -9,37 +9,37 @@ public class QuantityMeasurementAppTest {
     @Test
     @DisplayName("Test Feet equality - same values should be equal")
     public void testFeetEquality_SameValues_ShouldBeEqual() {
-        QuantityMeasurementApp.Feet feet1 = new QuantityMeasurementApp.Feet(5.0);
-        QuantityMeasurementApp.Feet feet2 = new QuantityMeasurementApp.Feet(5.0);
+        QuantityMeasurementApp.QuantityLength feet1 = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
+        QuantityMeasurementApp.QuantityLength feet2 = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertTrue(feet1.equals(feet2));
     }
 
     @Test
     @DisplayName("Test Feet equality - different values should not be equal")
     public void testFeetEquality_DifferentValues_ShouldNotBeEqual() {
-        QuantityMeasurementApp.Feet feet1 = new QuantityMeasurementApp.Feet(5.0);
-        QuantityMeasurementApp.Feet feet2 = new QuantityMeasurementApp.Feet(10.0);
+        QuantityMeasurementApp.QuantityLength feet1 = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
+        QuantityMeasurementApp.QuantityLength feet2 = new QuantityMeasurementApp.QuantityLength(10.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertFalse(feet1.equals(feet2));
     }
 
     @Test
     @DisplayName("Test Feet equality - same object reference should be equal")
     public void testFeetEquality_SameReference_ShouldBeEqual() {
-        QuantityMeasurementApp.Feet feet = new QuantityMeasurementApp.Feet(5.0);
+        QuantityMeasurementApp.QuantityLength feet = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertTrue(feet.equals(feet));
     }
 
     @Test
     @DisplayName("Test Feet equality - null object should not be equal")
     public void testFeetEquality_NullObject_ShouldNotBeEqual() {
-        QuantityMeasurementApp.Feet feet = new QuantityMeasurementApp.Feet(5.0);
+        QuantityMeasurementApp.QuantityLength feet = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertFalse(feet.equals(null));
     }
 
     @Test
     @DisplayName("Test Feet equality - different class should not be equal")
     public void testFeetEquality_DifferentClass_ShouldNotBeEqual() {
-        QuantityMeasurementApp.Feet feet = new QuantityMeasurementApp.Feet(5.0);
+        QuantityMeasurementApp.QuantityLength feet = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
         String notFeet = "5.0";
         assertFalse(feet.equals(notFeet));
     }
@@ -47,24 +47,24 @@ public class QuantityMeasurementAppTest {
     @Test
     @DisplayName("Test Feet with zero value")
     public void testFeet_ZeroValue_ShouldWork() {
-        QuantityMeasurementApp.Feet feet1 = new QuantityMeasurementApp.Feet(0.0);
-        QuantityMeasurementApp.Feet feet2 = new QuantityMeasurementApp.Feet(0.0);
+        QuantityMeasurementApp.QuantityLength feet1 = new QuantityMeasurementApp.QuantityLength(0.0, QuantityMeasurementApp.LengthUnit.FEET);
+        QuantityMeasurementApp.QuantityLength feet2 = new QuantityMeasurementApp.QuantityLength(0.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertTrue(feet1.equals(feet2));
     }
 
     @Test
     @DisplayName("Test Feet with negative values")
     public void testFeet_NegativeValues_ShouldWork() {
-        QuantityMeasurementApp.Feet feet1 = new QuantityMeasurementApp.Feet(-5.0);
-        QuantityMeasurementApp.Feet feet2 = new QuantityMeasurementApp.Feet(-5.0);
+        QuantityMeasurementApp.QuantityLength feet1 = new QuantityMeasurementApp.QuantityLength(-5.0, QuantityMeasurementApp.LengthUnit.FEET);
+        QuantityMeasurementApp.QuantityLength feet2 = new QuantityMeasurementApp.QuantityLength(-5.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertTrue(feet1.equals(feet2));
     }
 
     @Test
     @DisplayName("Test Feet with decimal values")
     public void testFeet_DecimalValues_ShouldWork() {
-        QuantityMeasurementApp.Feet feet1 = new QuantityMeasurementApp.Feet(5.5);
-        QuantityMeasurementApp.Feet feet2 = new QuantityMeasurementApp.Feet(5.5);
+        QuantityMeasurementApp.QuantityLength feet1 = new QuantityMeasurementApp.QuantityLength(5.5, QuantityMeasurementApp.LengthUnit.FEET);
+        QuantityMeasurementApp.QuantityLength feet2 = new QuantityMeasurementApp.QuantityLength(5.5, QuantityMeasurementApp.LengthUnit.FEET);
         assertTrue(feet1.equals(feet2));
     }
 
@@ -72,7 +72,7 @@ public class QuantityMeasurementAppTest {
     @DisplayName("Test Feet constructor with NaN should throw exception")
     public void testFeet_NaNValue_ShouldThrowException() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            new QuantityMeasurementApp.Feet(Double.NaN);
+            new QuantityMeasurementApp.QuantityLength(Double.NaN, QuantityMeasurementApp.LengthUnit.FEET);
         });
         assertEquals("Invalid feet value", exception.getMessage());
     }
@@ -80,8 +80,8 @@ public class QuantityMeasurementAppTest {
     @Test
     @DisplayName("Test Feet hashCode - equal objects should have same hashCode")
     public void testFeet_HashCode_EqualObjectsSameHashCode() {
-        QuantityMeasurementApp.Feet feet1 = new QuantityMeasurementApp.Feet(5.0);
-        QuantityMeasurementApp.Feet feet2 = new QuantityMeasurementApp.Feet(5.0);
+        QuantityMeasurementApp.QuantityLength feet1 = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
+        QuantityMeasurementApp.QuantityLength feet2 = new QuantityMeasurementApp.QuantityLength(5.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertEquals(feet1.hashCode(), feet2.hashCode());
     }
 
@@ -90,54 +90,54 @@ public class QuantityMeasurementAppTest {
     @Test
     @DisplayName("Test Inches equality - same values should be equal")
     public void testInchesEquality_SameValues_ShouldBeEqual() {
-        QuantityMeasurementApp.Inches inches1 = new QuantityMeasurementApp.Inches(12.0);
-        QuantityMeasurementApp.Inches inches2 = new QuantityMeasurementApp.Inches(12.0);
+        QuantityMeasurementApp.QuantityLength inches1 = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
+        QuantityMeasurementApp.QuantityLength inches2 = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
         assertTrue(inches1.equals(inches2));
     }
 
     @Test
     @DisplayName("Test Inches equality - different values should not be equal")
     public void testInchesEquality_DifferentValues_ShouldNotBeEqual() {
-        QuantityMeasurementApp.Inches inches1 = new QuantityMeasurementApp.Inches(12.0);
-        QuantityMeasurementApp.Inches inches2 = new QuantityMeasurementApp.Inches(24.0);
+        QuantityMeasurementApp.QuantityLength inches1 = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
+        QuantityMeasurementApp.QuantityLength inches2 = new QuantityMeasurementApp.QuantityLength(24.0, QuantityMeasurementApp.LengthUnit.INCHES);
         assertFalse(inches1.equals(inches2));
     }
 
     @Test
     @DisplayName("Test Inches equality - same object reference should be equal")
     public void testInchesEquality_SameReference_ShouldBeEqual() {
-        QuantityMeasurementApp.Inches inches = new QuantityMeasurementApp.Inches(12.0);
+        QuantityMeasurementApp.QuantityLength inches = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
         assertTrue(inches.equals(inches));
     }
 
     @Test
     @DisplayName("Test Inches equality - null object should not be equal")
     public void testInchesEquality_NullObject_ShouldNotBeEqual() {
-        QuantityMeasurementApp.Inches inches = new QuantityMeasurementApp.Inches(12.0);
+        QuantityMeasurementApp.QuantityLength inches = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
         assertFalse(inches.equals(null));
     }
 
     @Test
     @DisplayName("Test Inches equality - different class should not be equal")
     public void testInchesEquality_DifferentClass_ShouldNotBeEqual() {
-        QuantityMeasurementApp.Inches inches = new QuantityMeasurementApp.Inches(12.0);
-        QuantityMeasurementApp.Feet feet = new QuantityMeasurementApp.Feet(12.0);
+        QuantityMeasurementApp.QuantityLength inches = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
+        QuantityMeasurementApp.QuantityLength feet = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.FEET);
         assertFalse(inches.equals(feet));
     }
 
     @Test
     @DisplayName("Test Inches with zero value")
     public void testInches_ZeroValue_ShouldWork() {
-        QuantityMeasurementApp.Inches inches1 = new QuantityMeasurementApp.Inches(0.0);
-        QuantityMeasurementApp.Inches inches2 = new QuantityMeasurementApp.Inches(0.0);
+        QuantityMeasurementApp.QuantityLength inches1 = new QuantityMeasurementApp.QuantityLength(0.0, QuantityMeasurementApp.LengthUnit.INCHES);
+        QuantityMeasurementApp.QuantityLength inches2 = new QuantityMeasurementApp.QuantityLength(0.0, QuantityMeasurementApp.LengthUnit.INCHES);
         assertTrue(inches1.equals(inches2));
     }
 
     @Test
     @DisplayName("Test Inches with negative values")
     public void testInches_NegativeValues_ShouldWork() {
-        QuantityMeasurementApp.Inches inches1 = new QuantityMeasurementApp.Inches(-12.0);
-        QuantityMeasurementApp.Inches inches2 = new QuantityMeasurementApp.Inches(-12.0);
+        QuantityMeasurementApp.QuantityLength inches1 = new QuantityMeasurementApp.QuantityLength(-12.0, QuantityMeasurementApp.LengthUnit.INCHES);
+        QuantityMeasurementApp.QuantityLength inches2 = new QuantityMeasurementApp.QuantityLength(-12.0, QuantityMeasurementApp.LengthUnit.INCHES);
         assertTrue(inches1.equals(inches2));
     }
 
@@ -145,7 +145,7 @@ public class QuantityMeasurementAppTest {
     @DisplayName("Test Inches constructor with NaN should throw exception")
     public void testInches_NaNValue_ShouldThrowException() {
         IllegalArgumentException exception = assertThrows(IllegalArgumentException.class, () -> {
-            new QuantityMeasurementApp.Inches(Double.NaN);
+            new QuantityMeasurementApp.QuantityLength(Double.NaN, QuantityMeasurementApp.LengthUnit.INCHES);
         });
         assertEquals("Invalid inches value", exception.getMessage());
     }
@@ -153,8 +153,8 @@ public class QuantityMeasurementAppTest {
     @Test
     @DisplayName("Test Inches hashCode - equal objects should have same hashCode")
     public void testInches_HashCode_EqualObjectsSameHashCode() {
-        QuantityMeasurementApp.Inches inches1 = new QuantityMeasurementApp.Inches(12.0);
-        QuantityMeasurementApp.Inches inches2 = new QuantityMeasurementApp.Inches(12.0);
+        QuantityMeasurementApp.QuantityLength inches1 = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
+        QuantityMeasurementApp.QuantityLength inches2 = new QuantityMeasurementApp.QuantityLength(12.0, QuantityMeasurementApp.LengthUnit.INCHES);
         assertEquals(inches1.hashCode(), inches2.hashCode());
     }
 

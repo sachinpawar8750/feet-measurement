@@ -1,71 +1,73 @@
 public class QuantityMeasurementApp {
-    static class Feet {
-        private final double value;
+    // Enum representing supported length units and their conversion factor to feet
+    public enum LengthUnit {
+        FEET(1.0, "feet"),
+        INCHES(1.0 / 12.0, "inches");
 
-        public Feet(double value) {
+        private final double toFeetFactor;
+        private final String label;
+
+        LengthUnit(double toFeetFactor, String label) {
+            this.toFeetFactor = toFeetFactor;
+            this.label = label;
+        }
+
+        public double toFeet(double value) {
+            return value * toFeetFactor;
+        }
+
+        public String label() {
+            return label;
+        }
+    }
+
+    // Generic QuantityLength class that represents a measurement and its unit
+    public static class QuantityLength {
+        private final double value;
+        private final LengthUnit unit;
+
+        public QuantityLength(double value, LengthUnit unit) {
             if (Double.isNaN(value)) {
-                throw new IllegalArgumentException("Invalid feet value");
+                throw new IllegalArgumentException("Invalid " + unit.label() + " value");
             }
             this.value = value;
+            this.unit = unit;
+        }
+
+        public double toFeet() {
+            return unit.toFeet(value);
         }
 
         @Override
         public boolean equals(Object obj) {
             if (this == obj) return true;
             if (obj == null || getClass() != obj.getClass()) return false;
-            Feet other = (Feet) obj;
-            return Double.compare(this.value, other.value) == 0;
+            QuantityLength other = (QuantityLength) obj;
+            return Double.compare(this.toFeet(), other.toFeet()) == 0;
         }
 
         @Override
         public int hashCode() {
-            return Double.hashCode(value);
+            return Double.hashCode(this.toFeet());
         }
     }
 
-    // ===== Inches Class =====
-    static class Inches {
-        private final double value;
-
-        public Inches(double value) {
-            if (Double.isNaN(value)) {
-                throw new IllegalArgumentException("Invalid inches value");
-            }
-            this.value = value;
-        }
-
-        @Override
-        public boolean equals(Object obj) {
-            if (this == obj) return true;
-            if (obj == null || getClass() != obj.getClass()) return false;
-            Inches other = (Inches) obj;
-            return Double.compare(this.value, other.value) == 0;
-        }
-
-        @Override
-        public int hashCode() {
-            return Double.hashCode(value);
-        }
-    }
-
-    // ===== Static method for Feet equality =====
+    // ===== Static method for Feet equality (kept for compatibility) =====
     public static boolean checkFeetEquality(double v1, double v2) {
-        Feet f1 = new Feet(v1);
-        Feet f2 = new Feet(v2);
+        QuantityLength f1 = new QuantityLength(v1, LengthUnit.FEET);
+        QuantityLength f2 = new QuantityLength(v2, LengthUnit.FEET);
         return f1.equals(f2);
     }
 
-    // ===== Static method for Inches equality =====
+    // ===== Static method for Inches equality (kept for compatibility) =====
     public static boolean checkInchesEquality(double v1, double v2) {
-        Inches i1 = new Inches(v1);
-        Inches i2 = new Inches(v2);
+        QuantityLength i1 = new QuantityLength(v1, LengthUnit.INCHES);
+        QuantityLength i2 = new QuantityLength(v2, LengthUnit.INCHES);
         return i1.equals(i2);
     }
 
     // ===== Main Method =====
     public static void main(String[] args) {
-
-        // Hard-coded values as per use case
         boolean feetResult = checkFeetEquality(5.0, 5.0);
         boolean feetResult1 = checkFeetEquality(12, 5.0);
         boolean feetResult2 = checkFeetEquality(5.0, 15);
