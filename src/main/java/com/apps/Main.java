@@ -10,7 +10,7 @@ public class Main {
         boolean feetResult2 = MeasurementComparator.compareFeet(17, 20);
 
         boolean inchResult1 = MeasurementComparator.compareInches(2, 2);
-        boolean inchResult2 = MeasurementComparator.compareInches(3, 3);
+        boolean inchResult2 = MeasurementComparator.compareInches(3, 5);
 
         System.out.println(feetResult1);
         System.out.println(feetResult2);

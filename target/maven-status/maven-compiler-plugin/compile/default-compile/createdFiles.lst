@@ -1,0 +1,4 @@
+com\apps\Main.class
+com\apps\measurement\unit\Inches.class
+com\apps\measurement\util\MeasurementComparator.class
+com\apps\measurement\unit\Feet.class

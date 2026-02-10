@@ -7,15 +7,15 @@ public class InchesTest {
 
     @Test
     public void testEqualInches() {
-        Inches inches1 = new Inches(2);
-        Inches inches2 = new Inches(2);
+        Inches inches1 = new Inches(12);
+        Inches inches2 = new Inches(12);
         assertEquals(inches1, inches2);
     }
 
     @Test
     public void testNotEqualInches() {
-        Inches inches1 = new Inches(2);
-        Inches inches2 = new Inches(5);
+        Inches inches1 = new Inches(12);
+        Inches inches2 = new Inches(24);
         assertNotEquals(inches1, inches2);
     }
 
@@ -26,8 +26,8 @@ public class InchesTest {
 
     @Test
     public void testInchesHashCode() {
-        Inches inches1 = new Inches(3);
-        Inches inches2 = new Inches(3);
+        Inches inches1 = new Inches(12);
+        Inches inches2 = new Inches(12);
         assertEquals(inches1.hashCode(), inches2.hashCode());
     }
 }
