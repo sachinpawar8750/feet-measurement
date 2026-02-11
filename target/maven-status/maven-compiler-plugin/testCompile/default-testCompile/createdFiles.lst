@@ -1,0 +1,3 @@
+com\app\quantitymeasurement\model\QuantityLengthTest.class
+com\app\quantitymeasurement\model\LengthUnitTest.class
+com\app\quantitymeasurement\util\MeasurementComparatorTest.class

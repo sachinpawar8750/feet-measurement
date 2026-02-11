@@ -1,0 +1,5 @@
+com\app\quantitymeasurement\unit\Feet.class
+com\app\quantitymeasurement\util\MeasurementComparator.class
+com\app\quantitymeasurement\model\LengthUnit.class
+com\app\quantitymeasurement\model\QuantityLength.class
+com\app\Main.class
