@@ -1,7 +1,7 @@
 package com.apps;
 
 
-import com.apps.measurement.util.MeasurementComparator;
+import com.apps.quantitymeasurement.util.MeasurementComparator;
 
 public class Main {
     public static void main(String[] args) {

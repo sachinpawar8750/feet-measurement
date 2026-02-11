@@ -5,15 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp$Feet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp$Inches.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementAppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementAppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/SimpleTestRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/lib/junit-platform-console-standalone-1.9.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/run-tests.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,28 +27,32 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "sachinpawar8750"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;sachinpawar8750&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings"><![CDATA[{
   "selectedUrlAndAccountId": {
-    "url": "https://github.com/sachinpawar8750/feet-measurement.git",
-    "accountId": "2b591f87-322e-46bd-b8ba-d79933ddfcc1"
+    "url": "git@github.com:sachinpawar8750/feet-measurement.git",
+    "accountId": "74b5e1a1-51dd-4928-a464-45371009a981"
   }
 }]]></component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.QuantityMeasurementApp.executor": "Run",
-    "git-widget-placeholder": "feature/UC2-feetEquality",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0"
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.QuantityMeasurementApp.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/UC2-feetEquality&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="QuantityMeasurementApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="22" />
