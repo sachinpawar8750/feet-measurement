@@ -1,3 +1,5 @@
+package com.quantitymeasurement;
+
 public class QuantityMeasurementApp {
     static class Feet {
         private final double value;
@@ -23,7 +25,6 @@ public class QuantityMeasurementApp {
         }
     }
 
-    // ===== Inches Class =====
     static class Inches {
         private final double value;
 
@@ -48,24 +49,19 @@ public class QuantityMeasurementApp {
         }
     }
 
-    // ===== Static method for Feet equality =====
     public static boolean checkFeetEquality(double v1, double v2) {
         Feet f1 = new Feet(v1);
         Feet f2 = new Feet(v2);
         return f1.equals(f2);
     }
 
-    // ===== Static method for Inches equality =====
     public static boolean checkInchesEquality(double v1, double v2) {
         Inches i1 = new Inches(v1);
         Inches i2 = new Inches(v2);
         return i1.equals(i2);
     }
 
-    // ===== Main Method =====
     public static void main(String[] args) {
-
-        // Hard-coded values as per use case
         boolean feetResult = checkFeetEquality(5.0, 5.0);
         boolean feetResult1 = checkFeetEquality(12, 5.0);
         boolean feetResult2 = checkFeetEquality(5.0, 15);
