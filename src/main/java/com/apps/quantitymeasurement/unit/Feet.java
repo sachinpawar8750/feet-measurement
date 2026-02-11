@@ -1,4 +1,4 @@
-package com.apps.measurement.unit;
+package com.apps.quantitymeasurement.unit;
 public class Feet {
     private final double value;
 
