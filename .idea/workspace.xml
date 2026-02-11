@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/Main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/LengthUnit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/QuantityLength.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/unit/Feet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/util/MeasurementComparator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/app/Main.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/LengthUnit.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/QuantityLength.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/unit/Feet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/util/MeasurementComparator.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.apps.quantitymeasurement.unit.FeetTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.apps.quantitymeasurement.unit.InchesTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.apps.quantitymeasurement.util.MeasurementComparatorTest.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/apps/quantitymeasurement/unit/FeetTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/apps/quantitymeasurement/unit/InchesTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/target/test-classes/com/apps/quantitymeasurement/util/MeasurementComparatorTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp$Feet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp$Inches.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp$LengthUnit.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp$QuantityLength.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementApp.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementAppTest.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/QuantityMeasurementAppTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/SimpleTestRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/lib/junit-platform-console-standalone-1.9.3.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/QuantityMeasurementApp/run-tests.bat" beforeDir="false" />
-    </list>
+    <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -71,18 +42,18 @@
     <commands />
     <urls />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.QuantityMeasurementApp.executor&quot;: &quot;Run&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/UC3-feetEquality&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.QuantityMeasurementApp.executor": "Run",
+    "git-widget-placeholder": "feature/UC3-feetEquality",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Problems",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "preferences.lookFeel"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected="Application.Main">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.app.Main" />
