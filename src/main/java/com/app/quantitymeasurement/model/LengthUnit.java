@@ -2,7 +2,9 @@ package com.app.quantitymeasurement.model;
 
 public enum LengthUnit {
     FEET(1.0, "feet"),
-    INCHES(1.0 / 12.0, "inches");
+    INCHES(1.0 / 12.0, "inches"),
+    YARD(3.0, "yard"),
+    CENTIMETER(0.393701 / 12.0, "centimeter");
 
     private final double toFeetFactor;
     private final String label;

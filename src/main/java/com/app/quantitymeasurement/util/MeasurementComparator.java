@@ -14,4 +14,14 @@ public class MeasurementComparator {
         QuantityLength i2 = new QuantityLength(v2, LengthUnit.INCHES);
         return i1.equals(i2);
     }
+    public static boolean checkCentimeterEquality(double v1, double v2){
+        QuantityLength q1 = new QuantityLength(v1, LengthUnit.CENTIMETER);
+        QuantityLength q2 = new QuantityLength(v2, LengthUnit.CENTIMETER);
+        return q1.equals(q2);
+    }
+    public static boolean checkYardEquality(double v1, double v2){
+        QuantityLength q1 = new QuantityLength(v1, LengthUnit.YARD);
+        QuantityLength q2 = new QuantityLength(v2, LengthUnit.YARD);
+        return q1.equals(q2);
+    }
 }

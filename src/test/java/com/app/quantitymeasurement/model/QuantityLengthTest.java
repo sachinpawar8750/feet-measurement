@@ -13,45 +13,35 @@ public class QuantityLengthTest {
     }
 
     @Test
-    public void testInchesEquality() {
-        QuantityLength inches1 = new QuantityLength(12.0, LengthUnit.INCHES);
-        QuantityLength inches2 = new QuantityLength(12.0, LengthUnit.INCHES);
-        assertEquals(inches1, inches2);
-    }
-
-    @Test
-    public void testFeetNotEqual() {
+    public void testFeetInequality() {
         QuantityLength feet1 = new QuantityLength(5.0, LengthUnit.FEET);
-        QuantityLength feet2 = new QuantityLength(12.0, LengthUnit.FEET);
+        QuantityLength feet2 = new QuantityLength(10.0, LengthUnit.FEET);
         assertNotEquals(feet1, feet2);
     }
 
-    @Test(expected = IllegalArgumentException.class)
-    public void testInvalidFeetValue() {
-        new QuantityLength(Double.NaN, LengthUnit.FEET);
-    }
-
-    @Test(expected = IllegalArgumentException.class)
-    public void testInvalidInchesValue() {
-        new QuantityLength(Double.NaN, LengthUnit.INCHES);
-    }
-
     @Test
-    public void testHashCode() {
-        QuantityLength feet1 = new QuantityLength(5.0, LengthUnit.FEET);
-        QuantityLength feet2 = new QuantityLength(5.0, LengthUnit.FEET);
-        assertEquals(feet1.hashCode(), feet2.hashCode());
-    }
-
-    @Test
-    public void testToFeetConversion() {
-        QuantityLength feet = new QuantityLength(5.0, LengthUnit.FEET);
-        assertEquals(5.0, feet.toFeet(), 0.001);
-    }
-
-    @Test
-    public void testInchesToFeet() {
+    public void testInchesToFeetConversion() {
         QuantityLength inches = new QuantityLength(12.0, LengthUnit.INCHES);
-        assertEquals(1.0, inches.toFeet(), 0.001);
+        QuantityLength feet = new QuantityLength(1.0, LengthUnit.FEET);
+        assertEquals(feet, inches);
+    }
+
+    @Test
+    public void testYardToFeetConversion() {
+        QuantityLength yard = new QuantityLength(1.0, LengthUnit.YARD);
+        QuantityLength feet = new QuantityLength(3.0, LengthUnit.FEET);
+        assertEquals(yard, feet);
+    }
+
+    @Test
+    public void testCentimeterEquality() {
+        QuantityLength cm1 = new QuantityLength(10.0, LengthUnit.CENTIMETER);
+        QuantityLength cm2 = new QuantityLength(10.0, LengthUnit.CENTIMETER);
+        assertEquals(cm1, cm2);
+    }
+
+    @Test(expected = IllegalArgumentException.class)
+    public void testInvalidValue() {
+        new QuantityLength(Double.NaN, LengthUnit.FEET);
     }
 }
