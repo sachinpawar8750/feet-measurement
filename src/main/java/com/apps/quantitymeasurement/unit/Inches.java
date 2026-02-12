@@ -1,4 +1,4 @@
-package com.apps.measurement.unit;
+package com.apps.quantitymeasurement.unit;
 public class Inches {
     private final double value;
 

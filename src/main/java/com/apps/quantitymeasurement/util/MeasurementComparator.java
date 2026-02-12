@@ -1,7 +1,7 @@
 package com.apps.quantitymeasurement.util;
 
-import com.apps.measurement.unit.Inches;
-import com.apps.measurement.unit.Feet;
+import com.apps.quantitymeasurement.unit.Inches;
+import com.apps.quantitymeasurement.unit.Feet;
 public class MeasurementComparator{
     public static boolean checkFeetEquality(double v1, double v2) {
         Feet f1 = new Feet(v1);
