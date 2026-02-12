@@ -18,6 +18,10 @@ public enum LengthUnit {
         return value * toFeetFactor;
     }
 
+    public double getConversionFactor() {
+        return toFeetFactor;
+    }
+
     public String label() {
         return label;
     }
