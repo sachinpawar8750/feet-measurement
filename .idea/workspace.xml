@@ -4,7 +4,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="" />
+    <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/QuantityLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/QuantityLength.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/app/quantitymeasurement/model/QuantityLengthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/app/quantitymeasurement/model/QuantityLengthTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/QuantityLength.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/QuantityLength.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/apps/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/apps/quantitymeasurement/unit/Feet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/apps/quantitymeasurement/unit/Inches.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/apps/quantitymeasurement/util/MeasurementComparator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantitymeasurement/QuantityMeasurementApp$Feet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantitymeasurement/QuantityMeasurementApp$Inches.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/quantitymeasurement/QuantityMeasurementApp.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -60,14 +74,14 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "feature/UC5-feetEquality",
+    "git-widget-placeholder": "feature/UC6-feetEquality",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Problems",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.lookFeel",

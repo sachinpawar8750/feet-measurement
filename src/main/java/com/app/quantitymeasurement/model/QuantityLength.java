@@ -6,7 +6,10 @@ public class QuantityLength {
     private final LengthUnit unit;
 
     public QuantityLength(double value, LengthUnit unit) {
-        if (Double.isNaN(value)) {
+        if (unit == null) {
+            throw new IllegalArgumentException("Unit cannot be null");
+        }
+        if (!Double.isFinite(value)) {
             throw new IllegalArgumentException("Invalid " + unit.label() + " value");
         }
         this.value = value;
@@ -17,12 +20,6 @@ public class QuantityLength {
         return unit.toFeet(value);
     }
 
-    /**
-     * Converts this quantity to the specified target unit.
-     * @param targetUnit the unit to convert to
-     * @return a new QuantityLength in the target unit
-     * @throws IllegalArgumentException if targetUnit is null
-     */
     public QuantityLength convertTo(LengthUnit targetUnit) {
         if (targetUnit == null) {
             throw new IllegalArgumentException("Target unit cannot be null");
@@ -56,6 +53,19 @@ public class QuantityLength {
     @Override
     public int hashCode() {
         return Double.hashCode(this.toFeet());
+    }
+
+    public static QuantityLength add(QuantityLength length1, QuantityLength length2) {
+        if (length1 == null || length2 == null) {
+            throw new IllegalArgumentException("Length values cannot be null");
+        }
+        double baseSum = length1.toFeet() + length2.toFeet();
+        double resultValue = baseSum / length1.unit.getConversionFactor();
+        return new QuantityLength(resultValue, length1.unit);
+    }
+
+    public QuantityLength add(QuantityLength other) {
+        return add(this, other);
     }
 
 }
