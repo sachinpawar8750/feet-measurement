@@ -64,8 +64,24 @@ public class QuantityLength {
         return new QuantityLength(resultValue, length1.unit);
     }
 
+    public static QuantityLength add(QuantityLength length1, QuantityLength length2, LengthUnit targetUnit) {
+        if (length1 == null || length2 == null) {
+            throw new IllegalArgumentException("Length values cannot be null");
+        }
+        if (targetUnit == null) {
+            throw new IllegalArgumentException("Target unit cannot be null");
+        }
+        double baseSum = length1.toFeet() + length2.toFeet();
+        double resultValue = baseSum / targetUnit.getConversionFactor();
+        return new QuantityLength(resultValue, targetUnit);
+    }
+
     public QuantityLength add(QuantityLength other) {
         return add(this, other);
+    }
+
+    public QuantityLength add(QuantityLength other, LengthUnit targetUnit) {
+        return add(this, other, targetUnit);
     }
 
 }
