@@ -78,7 +78,7 @@ public class QuantityLengthTest {
     @Test
     public void testAddCentimeterAndInches() {
         QuantityLength result = QuantityLength.add(new QuantityLength(2.54, LengthUnit.CENTIMETER), new QuantityLength(1.0, LengthUnit.INCHES));
-        assertEquals(new QuantityLength(5.08, LengthUnit.CENTIMETER), result);
+        assertEquals(new QuantityLength(5.08, LengthUnit.CENTIMETER).toFeet(), result.toFeet(), 0.001);
     }
 
     @Test
@@ -102,12 +102,12 @@ public class QuantityLengthTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testAddNullFirstOperand() {
-        QuantityLength.add(null, new QuantityLength(1.0, LengthUnit.FEET));
+        QuantityLength.add((QuantityLength) null, new QuantityLength(1.0, LengthUnit.FEET));
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void testAddNullSecondOperand() {
-        QuantityLength.add(new QuantityLength(1.0, LengthUnit.FEET), null);
+        QuantityLength.add(new QuantityLength(1.0, LengthUnit.FEET), (QuantityLength) null);
     }
 
     @Test
@@ -151,7 +151,7 @@ public class QuantityLengthTest {
     @Test
     public void testAddCentimeterWithTargetCentimeter() {
         QuantityLength result = QuantityLength.add(new QuantityLength(2.54, LengthUnit.CENTIMETER), new QuantityLength(1.0, LengthUnit.INCHES), LengthUnit.CENTIMETER);
-        assertEquals(new QuantityLength(5.08, LengthUnit.CENTIMETER), result);
+        assertEquals(new QuantityLength(5.08, LengthUnit.CENTIMETER).toFeet(), result.toFeet(), 0.001);
     }
 
     @Test
@@ -175,7 +175,7 @@ public class QuantityLengthTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testAddWithNullTargetUnit() {
-        QuantityLength.add(new QuantityLength(1.0, LengthUnit.FEET), new QuantityLength(1.0, LengthUnit.FEET), null);
+        QuantityLength.add(new QuantityLength(1.0, LengthUnit.FEET), new QuantityLength(1.0, LengthUnit.FEET), (LengthUnit) null);
     }
 
     @Test

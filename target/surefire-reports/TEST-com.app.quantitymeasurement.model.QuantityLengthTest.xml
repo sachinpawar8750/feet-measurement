@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.104" tests="11" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.002" tests="29" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -7,7 +7,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="sun.cpu.isalist" value=""/>
     <property name="sun.jnu.encoding" value="Cp1252"/>
-    <property name="java.class.path" value="c:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\test-classes;c:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\classes;C:\Users\sachin pawar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sachin pawar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.class.path" value="C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\test-classes;C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\classes;C:\Users\sachin pawar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sachin pawar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="sun.arch.data.model" value="32"/>
     <property name="user.variant" value=""/>
@@ -18,20 +18,20 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_202\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire1922859107967304931\surefirebooter-20260212233131279_3.jar C:\Users\sachin pawar\AppData\Local\Temp\surefire1922859107967304931 2026-02-12T23-31-30_856-jvmRun1 surefire-20260212233131279_1tmp surefire_0-20260212233131279_2tmp"/>
-    <property name="surefire.test.class.path" value="c:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\test-classes;c:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\classes;C:\Users\sachin pawar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sachin pawar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.java.command" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire7825608721390321176\surefirebooter-20260301232019439_3.jar C:\Users\sachin pawar\AppData\Local\Temp\surefire7825608721390321176 2026-03-01T23-20-19_074-jvmRun1 surefire-20260301232019439_1tmp surefire_0-20260301232019439_2tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\test-classes;C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\classes;C:\Users\sachin pawar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sachin pawar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\sachin pawar"/>
     <property name="user.language" value="en"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="java.home" value="C:\Program Files (x86)\Java\jdk1.8.0_202\jre"/>
-    <property name="basedir" value="c:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement"/>
+    <property name="basedir" value="C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement"/>
     <property name="file.separator" value="\"/>
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire1922859107967304931\surefirebooter-20260212233131279_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire7825608721390321176\surefirebooter-20260301232019439_3.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
@@ -47,7 +47,7 @@
     <property name="java.vendor.url.bug" value="http://bugreport.sun.com/bugreport/"/>
     <property name="java.io.tmpdir" value="C:\Users\SACHIN~1\AppData\Local\Temp\"/>
     <property name="java.version" value="1.8.0_202"/>
-    <property name="user.dir" value="c:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement"/>
+    <property name="user.dir" value="C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement"/>
     <property name="os.arch" value="x86"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
@@ -60,15 +60,33 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="52.0"/>
   </properties>
-  <testcase name="testStaticConvertMethod" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.005"/>
+  <testcase name="testAddWithTargetUnitInches" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddWithTargetUnitFeet" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddInchesYardWithTargetFeet" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddYardAndFeet" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddNegativeWithTargetInches" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddNullSecondOperand" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddWithNullTargetUnit" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddFeetAndInches" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testFeetEquality" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testInchesToFeetConversion" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testInstanceAddWithTargetUnit" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testFeetInequality" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
-  <testcase name="testConvertToInches" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
-  <testcase name="testConvertToYards" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
-  <testcase name="testStaticConvertWithInfiniteValue" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddYardsWithTargetYard" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddInchesAndFeet" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddInchesAndYard" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddCentimeterAndInches" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddCommutativityWithTargetUnit" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddWithZeroTargetYards" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddWithNegative" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddWithTargetUnitYards" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddNullFirstOperand" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testCentimeterEquality" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testInstanceAdd" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testInvalidValue" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testYardToFeetConversion" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
-  <testcase name="testConvertWithNullTargetUnit" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddSameUnits" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddCommutativity" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddWithZero" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testAddCentimeterWithTargetCentimeter" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
 </testsuite>
