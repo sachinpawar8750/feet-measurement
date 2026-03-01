@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/app/quantitymeasurement/model/QuantityLengthTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/app/quantitymeasurement/model/QuantityLengthTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/QuantityLength.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/QuantityLength.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/LengthUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/WeightUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/WeightUnit.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +67,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "feature/UC9-feetEquality",
+    "git-widget-placeholder": "feature/UC10-feetEquality",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -83,18 +81,16 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RunManager" selected="JUnit.MeasurementComparatorTest">
-    <configuration name="LengthUnitTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.Main">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.app.Main" />
       <module name="quantity-measurement-app" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.app.quantitymeasurement.model.*" />
+          <option name="PATTERN" value="com.app.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.app.quantitymeasurement.model" />
-      <option name="MAIN_CLASS_NAME" value="com.app.quantitymeasurement.model.LengthUnitTest" />
-      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -205,11 +201,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Main" />
         <item itemvalue="JUnit.MeasurementComparatorTest" />
         <item itemvalue="JUnit.WeightUnitTest" />
         <item itemvalue="JUnit.QuantityWeightTest" />
         <item itemvalue="JUnit.QuantityLengthTest" />
-        <item itemvalue="JUnit.LengthUnitTest" />
       </list>
     </recent_temporary>
   </component>
