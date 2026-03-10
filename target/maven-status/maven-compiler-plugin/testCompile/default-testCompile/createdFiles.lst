@@ -1,5 +1,7 @@
 com\app\quantitymeasurement\model\QuantityTest.class
+com\app\quantitymeasurement\model\QuantityTemperatureTest.class
 com\app\quantitymeasurement\model\WeightUnitTest.class
+com\app\quantitymeasurement\model\TemperatureUnitTest.class
 com\app\quantitymeasurement\model\QuantityVolumeTest.class
 com\app\quantitymeasurement\model\QuantityLengthTest.class
 com\app\quantitymeasurement\model\LengthUnitTest.class

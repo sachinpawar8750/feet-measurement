@@ -3,6 +3,7 @@ package com.app;
 import com.app.quantitymeasurement.model.LengthUnit;
 import com.app.quantitymeasurement.model.WeightUnit;
 import com.app.quantitymeasurement.model.VolumeUnit;
+import com.app.quantitymeasurement.model.TemperatureUnit;
 import com.app.quantitymeasurement.model.Quantity;
 
 import java.util.Scanner;
@@ -18,6 +19,7 @@ public class Main {
         System.out.println("1. Length Measurements");
         System.out.println("2. Weight Measurements");
         System.out.println("3. Volume Measurements");
+        System.out.println("4. Temperature Measurements");
         System.out.print("Choose category: ");
         int choice = scanner.nextInt();
         
@@ -27,6 +29,8 @@ public class Main {
             handleWeight(scanner);
         } else if (choice == 3) {
             handleVolume(scanner);
+        } else if (choice == 4) {
+            handleTemperature(scanner);
         } else {
             System.out.println("Invalid choice");
         }
@@ -86,6 +90,25 @@ public class Main {
         
         demonstrateOperations(volume1, volume2, scanner, "LITRE/MILLILITRE/GALLON", 
             s -> VolumeUnit.valueOf(s.toUpperCase()));
+    }
+    
+    private static void handleTemperature(Scanner scanner) {
+        System.out.print("\nEnter first value: ");
+        double value1 = scanner.nextDouble();
+        System.out.print("Enter first unit (CELSIUS/FAHRENHEIT): ");
+        TemperatureUnit unit1 = TemperatureUnit.valueOf(scanner.next().toUpperCase());
+        
+        System.out.print("Enter second value: ");
+        double value2 = scanner.nextDouble();
+        System.out.print("Enter second unit (CELSIUS/FAHRENHEIT): ");
+        TemperatureUnit unit2 = TemperatureUnit.valueOf(scanner.next().toUpperCase());
+        
+        Quantity<TemperatureUnit> temp1 = new Quantity<>(value1, unit1);
+        Quantity<TemperatureUnit> temp2 = new Quantity<>(value2, unit2);
+        
+        System.out.println("\nEquality: " + temp1.equals(temp2));
+        System.out.println("Conversion: " + temp1 + " = " + temp1.convertTo(unit2));
+        System.out.println("Note: Temperature does not support arithmetic operations (add/subtract/divide)");
     }
     
     private static <U extends com.app.quantitymeasurement.model.IMeasurable> void demonstrateOperations(

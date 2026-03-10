@@ -55,6 +55,7 @@ public class Quantity<U extends IMeasurable> {
     }
 
     private double performBaseArithmetic(Quantity<U> other, ArithmeticOperation operation) {
+        this.unit.validateOperationSupport(operation.name());
         validateArithmeticOperands(other, null, false);
         double baseValue1 = this.toBaseUnit();
         double baseValue2 = other.toBaseUnit();
