@@ -2,6 +2,7 @@ com\app\quantitymeasurement\model\IMeasurable.class
 com\app\quantitymeasurement\unit\Feet.class
 com\app\quantitymeasurement\util\Conversion.class
 com\app\quantitymeasurement\model\QuantityWeight.class
+com\app\quantitymeasurement\model\VolumeUnit.class
 com\app\quantitymeasurement\model\WeightUnit.class
 com\app\Main.class
 com\app\quantitymeasurement\util\MeasurementComparator.class

@@ -2,6 +2,7 @@ package com.app;
 
 import com.app.quantitymeasurement.model.LengthUnit;
 import com.app.quantitymeasurement.model.WeightUnit;
+import com.app.quantitymeasurement.model.VolumeUnit;
 import com.app.quantitymeasurement.model.Quantity;
 
 import java.util.Scanner;
@@ -16,6 +17,7 @@ public class Main {
         System.out.println("=== Quantity Measurement Application ===");
         System.out.println("1. Length Measurements");
         System.out.println("2. Weight Measurements");
+        System.out.println("3. Volume Measurements");
         System.out.print("Choose category: ");
         int choice = scanner.nextInt();
         
@@ -23,6 +25,8 @@ public class Main {
             handleLength(scanner);
         } else if (choice == 2) {
             handleWeight(scanner);
+        } else if (choice == 3) {
+            handleVolume(scanner);
         } else {
             System.out.println("Invalid choice");
         }
@@ -64,6 +68,24 @@ public class Main {
         
         demonstrateOperations(weight1, weight2, scanner, "KILOGRAM/GRAM/POUND", 
             s -> WeightUnit.valueOf(s.toUpperCase()));
+    }
+    
+    private static void handleVolume(Scanner scanner) {
+        System.out.print("\nEnter first value: ");
+        double value1 = scanner.nextDouble();
+        System.out.print("Enter first unit (LITRE/MILLILITRE/GALLON): ");
+        VolumeUnit unit1 = VolumeUnit.valueOf(scanner.next().toUpperCase());
+        
+        System.out.print("Enter second value: ");
+        double value2 = scanner.nextDouble();
+        System.out.print("Enter second unit (LITRE/MILLILITRE/GALLON): ");
+        VolumeUnit unit2 = VolumeUnit.valueOf(scanner.next().toUpperCase());
+        
+        Quantity<VolumeUnit> volume1 = new Quantity<>(value1, unit1);
+        Quantity<VolumeUnit> volume2 = new Quantity<>(value2, unit2);
+        
+        demonstrateOperations(volume1, volume2, scanner, "LITRE/MILLILITRE/GALLON", 
+            s -> VolumeUnit.valueOf(s.toUpperCase()));
     }
     
     private static <U extends com.app.quantitymeasurement.model.IMeasurable> void demonstrateOperations(
