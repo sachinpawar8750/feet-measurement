@@ -4,6 +4,7 @@ com\app\quantitymeasurement\model\QuantityVolumeTest.class
 com\app\quantitymeasurement\model\QuantityLengthTest.class
 com\app\quantitymeasurement\model\LengthUnitTest.class
 com\app\quantitymeasurement\util\MeasurementComparatorTest.class
+com\app\quantitymeasurement\model\QuantityArithmeticTest.class
 com\app\quantitymeasurement\model\IMeasurableTest.class
 com\app\quantitymeasurement\model\QuantityWeightTest.class
 com\app\quantitymeasurement\model\VolumeUnitTest.class

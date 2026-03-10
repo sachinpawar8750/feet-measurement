@@ -83,4 +83,48 @@ public class Quantity<U extends IMeasurable> {
     public Quantity<U> add(Quantity<U> other, U targetUnit) {
         return add(this, other, targetUnit);
     }
+
+    public static <U extends IMeasurable> Quantity<U> subtract(Quantity<U> q1, Quantity<U> q2) {
+        if (q1 == null || q2 == null) {
+            throw new IllegalArgumentException("Quantities cannot be null");
+        }
+        double baseDiff = q1.toBaseUnit() - q2.toBaseUnit();
+        double resultValue = q1.unit.convertFromBaseUnit(baseDiff);
+        return new Quantity<>(resultValue, q1.unit);
+    }
+
+    public static <U extends IMeasurable> Quantity<U> subtract(Quantity<U> q1, Quantity<U> q2, U targetUnit) {
+        if (q1 == null || q2 == null) {
+            throw new IllegalArgumentException("Quantities cannot be null");
+        }
+        if (targetUnit == null) {
+            throw new IllegalArgumentException("Target unit cannot be null");
+        }
+        double baseDiff = q1.toBaseUnit() - q2.toBaseUnit();
+        double resultValue = targetUnit.convertFromBaseUnit(baseDiff);
+        return new Quantity<>(resultValue, targetUnit);
+    }
+
+    public Quantity<U> subtract(Quantity<U> other) {
+        return subtract(this, other);
+    }
+
+    public Quantity<U> subtract(Quantity<U> other, U targetUnit) {
+        return subtract(this, other, targetUnit);
+    }
+
+    public static <U extends IMeasurable> double divide(Quantity<U> q1, Quantity<U> q2) {
+        if (q1 == null || q2 == null) {
+            throw new IllegalArgumentException("Quantities cannot be null");
+        }
+        double divisor = q2.toBaseUnit();
+        if (divisor == 0.0) {
+            throw new ArithmeticException("Division by zero");
+        }
+        return q1.toBaseUnit() / divisor;
+    }
+
+    public double divide(Quantity<U> other) {
+        return divide(this, other);
+    }
 }

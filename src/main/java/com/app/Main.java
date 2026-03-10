@@ -94,10 +94,13 @@ public class Main {
         System.out.println("\nEquality: " + q1.equals(q2));
         System.out.println("Conversion: " + q1 + " = " + q1.convertTo(q2.getUnit()));
         System.out.println("Addition (first unit): " + Quantity.add(q1, q2));
+        System.out.println("Subtraction (first unit): " + Quantity.subtract(q1, q2));
+        System.out.println("Division: " + Quantity.divide(q1, q2));
         
         System.out.print("\nEnter target unit for addition (" + unitOptions + "): ");
         U targetUnit = unitParser.apply(scanner.next());
         System.out.println("Addition (target unit): " + Quantity.add(q1, q2, targetUnit));
+        System.out.println("Subtraction (target unit): " + Quantity.subtract(q1, q2, targetUnit));
     }
 
 }
