@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.004" tests="29" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.006" tests="29" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -18,7 +18,7 @@
     <property name="user.country" value="IN"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files (x86)\Java\jdk1.8.0_202\jre\bin"/>
-    <property name="sun.java.command" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire9189238229212040731\surefirebooter-20260310213027194_3.jar C:\Users\sachin pawar\AppData\Local\Temp\surefire9189238229212040731 2026-03-10T21-30-26_812-jvmRun1 surefire-20260310213027194_1tmp surefire_0-20260310213027194_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire661392452391021917\surefirebooter-20260310213727430_3.jar C:\Users\sachin pawar\AppData\Local\Temp\surefire661392452391021917 2026-03-10T21-37-27_040-jvmRun1 surefire-20260310213727430_1tmp surefire_0-20260310213727430_2tmp"/>
     <property name="surefire.test.class.path" value="C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\test-classes;C:\Users\sachin pawar\IdeaProjects\new-feet-management\feet-measurement\target\classes;C:\Users\sachin pawar\.m2\repository\junit\junit\4.13.2\junit-4.13.2.jar;C:\Users\sachin pawar\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\sachin pawar"/>
@@ -31,7 +31,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
-    <property name="surefire.real.class.path" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire9189238229212040731\surefirebooter-20260310213027194_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\sachin pawar\AppData\Local\Temp\surefire661392452391021917\surefirebooter-20260310213727430_3.jar"/>
     <property name="sun.boot.class.path" value="C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\resources.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\rt.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\sunrsasign.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\jsse.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\jce.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\charsets.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\lib\jfr.jar;C:\Program Files (x86)\Java\jdk1.8.0_202\jre\classes"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot Client Compiler"/>
@@ -84,7 +84,7 @@
   <testcase name="testCentimeterEquality" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testInstanceAdd" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testInvalidValue" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
-  <testcase name="testYardToFeetConversion" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
+  <testcase name="testYardToFeetConversion" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.001"/>
   <testcase name="testAddSameUnits" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testAddCommutativity" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>
   <testcase name="testAddWithZero" classname="com.app.quantitymeasurement.model.QuantityLengthTest" time="0.0"/>

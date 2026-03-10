@@ -5,6 +5,7 @@ com\app\quantitymeasurement\model\QuantityWeight.class
 com\app\quantitymeasurement\model\VolumeUnit.class
 com\app\quantitymeasurement\model\WeightUnit.class
 com\app\Main.class
+com\app\quantitymeasurement\model\Quantity$ArithmeticOperation.class
 com\app\quantitymeasurement\util\MeasurementComparator.class
 com\app\quantitymeasurement\model\Quantity.class
 com\app\quantitymeasurement\model\LengthUnit.class
