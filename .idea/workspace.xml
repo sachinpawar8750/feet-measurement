@@ -4,7 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="" />
+    <list default="true" id="ff086e70-c4f9-4c36-8322-9ecd971693f1" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/IMeasurable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/IMeasurable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/LengthUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/LengthUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/TemperatureUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/TemperatureUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/VolumeUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/VolumeUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/WeightUnit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/app/quantitymeasurement/model/WeightUnit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/Main.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/IMeasurable.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/IMeasurable.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/TemperatureUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/TemperatureUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/VolumeUnit.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/app/quantitymeasurement/model/VolumeUnit.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.app.quantitymeasurement.model.QuantityLengthTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.app.quantitymeasurement.model.QuantityLengthTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-com.app.quantitymeasurement.util.MeasurementComparatorTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-com.app.quantitymeasurement.util.MeasurementComparatorTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.IMeasurableTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.IMeasurableTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.QuantityArithmeticTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.QuantityArithmeticTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.QuantityLengthTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.QuantityLengthTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.QuantityVolumeTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.QuantityVolumeTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.TemperatureUnitTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.model.TemperatureUnitTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.util.MeasurementComparatorTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/com.app.quantitymeasurement.util.MeasurementComparatorTest.txt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -63,7 +85,7 @@
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
-    "git-widget-placeholder": "feature/UC13-feetEquality",
+    "git-widget-placeholder": "feature/UC15-feetEquality",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",

@@ -33,6 +33,16 @@ public enum VolumeUnit implements IMeasurable {
         return this.name();
     }
 
+    @Override
+    public String getMeasurementType() {
+        return "VOLUME";
+    }
+
+    @Override
+    public IMeasurable fromUnitName(String unitName) {
+        return VolumeUnit.valueOf(unitName.toUpperCase());
+    }
+
     public String label() {
         return label;
     }

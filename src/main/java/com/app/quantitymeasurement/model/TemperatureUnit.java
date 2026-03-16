@@ -40,6 +40,16 @@ public enum TemperatureUnit implements IMeasurable {
     }
 
     @Override
+    public String getMeasurementType() {
+        return "TEMPERATURE";
+    }
+
+    @Override
+    public IMeasurable fromUnitName(String unitName) {
+        return TemperatureUnit.valueOf(unitName.toUpperCase());
+    }
+
+    @Override
     public boolean supportsArithmetic() {
         return supportsArithmetic.isSupported();
     }

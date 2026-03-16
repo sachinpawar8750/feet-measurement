@@ -12,6 +12,8 @@ public interface IMeasurable {
     double convertToBaseUnit(double value);
     double convertFromBaseUnit(double baseValue);
     String getUnitName();
+    String getMeasurementType();
+    IMeasurable fromUnitName(String unitName);
 
     default boolean supportsArithmetic() {
         return supportsArithmetic.isSupported();

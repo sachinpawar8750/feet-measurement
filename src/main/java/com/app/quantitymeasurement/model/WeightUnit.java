@@ -33,6 +33,16 @@ public enum WeightUnit implements IMeasurable {
         return this.name();
     }
 
+    @Override
+    public String getMeasurementType() {
+        return "WEIGHT";
+    }
+
+    @Override
+    public IMeasurable fromUnitName(String unitName) {
+        return WeightUnit.valueOf(unitName.toUpperCase());
+    }
+
     public String label() {
         return label;
     }

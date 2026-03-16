@@ -38,6 +38,16 @@ public enum LengthUnit implements IMeasurable {
         return this.name();
     }
 
+    @Override
+    public String getMeasurementType() {
+        return "LENGTH";
+    }
+
+    @Override
+    public IMeasurable fromUnitName(String unitName) {
+        return LengthUnit.valueOf(unitName.toUpperCase());
+    }
+
     public String label() {
         return label;
     }

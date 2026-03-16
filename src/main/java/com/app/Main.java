@@ -1,129 +1,123 @@
 package com.app;
 
-import com.app.quantitymeasurement.model.LengthUnit;
-import com.app.quantitymeasurement.model.WeightUnit;
-import com.app.quantitymeasurement.model.VolumeUnit;
-import com.app.quantitymeasurement.model.TemperatureUnit;
-import com.app.quantitymeasurement.model.Quantity;
+import com.app.quantitymeasurement.controller.QuantityMeasurementController;
+import com.app.quantitymeasurement.dto.QuantityDTO;
+import com.app.quantitymeasurement.repository.QuantityMeasurementCacheRepository;
+import com.app.quantitymeasurement.service.IQuantityMeasurementService;
+import com.app.quantitymeasurement.service.QuantityMeasurementServiceImpl;
 
 import java.util.Scanner;
 
-import static com.app.quantitymeasurement.util.MeasurementComparator.*;
-import static com.app.quantitymeasurement.util.Conversion.*;
-
 public class Main {
-    public static void main(String[] args){
+
+    private static Main instance;
+    private final QuantityMeasurementController controller;
+
+    private Main() {
+        this.controller = createController();
+    }
+
+    public static synchronized Main getInstance() {
+        if (instance == null) {
+            instance = new Main();
+        }
+        return instance;
+    }
+
+    private static IQuantityMeasurementService createService() {
+        return new QuantityMeasurementServiceImpl(QuantityMeasurementCacheRepository.getInstance());
+    }
+
+    private static QuantityMeasurementController createController() {
+        return new QuantityMeasurementController(createService());
+    }
+
+    public void run() {
         Scanner scanner = new Scanner(System.in);
-        
-        System.out.println("=== Quantity Measurement Application ===");
+        System.out.println("=== Quantity Measurement Application (UC15 N-Tier) ===");
         System.out.println("1. Length Measurements");
         System.out.println("2. Weight Measurements");
         System.out.println("3. Volume Measurements");
         System.out.println("4. Temperature Measurements");
         System.out.print("Choose category: ");
         int choice = scanner.nextInt();
-        
-        if (choice == 1) {
-            handleLength(scanner);
-        } else if (choice == 2) {
-            handleWeight(scanner);
-        } else if (choice == 3) {
-            handleVolume(scanner);
-        } else if (choice == 4) {
-            handleTemperature(scanner);
-        } else {
-            System.out.println("Invalid choice");
+
+        switch (choice) {
+            case 1: handleLength(scanner);      break;
+            case 2: handleWeight(scanner);      break;
+            case 3: handleVolume(scanner);      break;
+            case 4: handleTemperature(scanner); break;
+            default: System.out.println("Invalid choice");
         }
-        
         scanner.close();
     }
-    
-    private static void handleLength(Scanner scanner) {
+
+    private void handleLength(Scanner scanner) {
         System.out.print("\nEnter first value: ");
-        double value1 = scanner.nextDouble();
+        double v1 = scanner.nextDouble();
         System.out.print("Enter first unit (FEET/INCHES/YARD/CENTIMETER): ");
-        LengthUnit unit1 = LengthUnit.valueOf(scanner.next().toUpperCase());
-        
+        QuantityDTO.LengthUnit u1 = QuantityDTO.LengthUnit.valueOf(scanner.next().toUpperCase());
+
         System.out.print("Enter second value: ");
-        double value2 = scanner.nextDouble();
+        double v2 = scanner.nextDouble();
         System.out.print("Enter second unit (FEET/INCHES/YARD/CENTIMETER): ");
-        LengthUnit unit2 = LengthUnit.valueOf(scanner.next().toUpperCase());
-        
-        Quantity<LengthUnit> length1 = new Quantity<>(value1, unit1);
-        Quantity<LengthUnit> length2 = new Quantity<>(value2, unit2);
-        
-        demonstrateOperations(length1, length2, scanner, "FEET/INCHES/YARD/CENTIMETER", 
-            s -> LengthUnit.valueOf(s.toUpperCase()));
-    }
-    
-    private static void handleWeight(Scanner scanner) {
-        System.out.print("\nEnter first value: ");
-        double value1 = scanner.nextDouble();
-        System.out.print("Enter first unit (KILOGRAM/GRAM/POUND): ");
-        WeightUnit unit1 = WeightUnit.valueOf(scanner.next().toUpperCase());
-        
-        System.out.print("Enter second value: ");
-        double value2 = scanner.nextDouble();
-        System.out.print("Enter second unit (KILOGRAM/GRAM/POUND): ");
-        WeightUnit unit2 = WeightUnit.valueOf(scanner.next().toUpperCase());
-        
-        Quantity<WeightUnit> weight1 = new Quantity<>(value1, unit1);
-        Quantity<WeightUnit> weight2 = new Quantity<>(value2, unit2);
-        
-        demonstrateOperations(weight1, weight2, scanner, "KILOGRAM/GRAM/POUND", 
-            s -> WeightUnit.valueOf(s.toUpperCase()));
-    }
-    
-    private static void handleVolume(Scanner scanner) {
-        System.out.print("\nEnter first value: ");
-        double value1 = scanner.nextDouble();
-        System.out.print("Enter first unit (LITRE/MILLILITRE/GALLON): ");
-        VolumeUnit unit1 = VolumeUnit.valueOf(scanner.next().toUpperCase());
-        
-        System.out.print("Enter second value: ");
-        double value2 = scanner.nextDouble();
-        System.out.print("Enter second unit (LITRE/MILLILITRE/GALLON): ");
-        VolumeUnit unit2 = VolumeUnit.valueOf(scanner.next().toUpperCase());
-        
-        Quantity<VolumeUnit> volume1 = new Quantity<>(value1, unit1);
-        Quantity<VolumeUnit> volume2 = new Quantity<>(value2, unit2);
-        
-        demonstrateOperations(volume1, volume2, scanner, "LITRE/MILLILITRE/GALLON", 
-            s -> VolumeUnit.valueOf(s.toUpperCase()));
-    }
-    
-    private static void handleTemperature(Scanner scanner) {
-        System.out.print("\nEnter first value: ");
-        double value1 = scanner.nextDouble();
-        System.out.print("Enter first unit (CELSIUS/FAHRENHEIT): ");
-        TemperatureUnit unit1 = TemperatureUnit.valueOf(scanner.next().toUpperCase());
-        
-        System.out.print("Enter second value: ");
-        double value2 = scanner.nextDouble();
-        System.out.print("Enter second unit (CELSIUS/FAHRENHEIT): ");
-        TemperatureUnit unit2 = TemperatureUnit.valueOf(scanner.next().toUpperCase());
-        
-        Quantity<TemperatureUnit> temp1 = new Quantity<>(value1, unit1);
-        Quantity<TemperatureUnit> temp2 = new Quantity<>(value2, unit2);
-        
-        System.out.println("\nEquality: " + temp1.equals(temp2));
-        System.out.println("Conversion: " + temp1 + " = " + temp1.convertTo(unit2));
-        System.out.println("Note: Temperature does not support arithmetic operations (add/subtract/divide)");
-    }
-    
-    private static <U extends com.app.quantitymeasurement.model.IMeasurable> void demonstrateOperations(
-            Quantity<U> q1, Quantity<U> q2, Scanner scanner, String unitOptions, 
-            java.util.function.Function<String, U> unitParser) {
-        System.out.println("\nEquality: " + q1.equals(q2));
-        System.out.println("Conversion: " + q1 + " = " + q1.convertTo(q2.getUnit()));
-        System.out.println("Addition (first unit): " + Quantity.add(q1, q2));
-        System.out.println("Subtraction (first unit): " + Quantity.subtract(q1, q2));
-        System.out.println("Division: " + Quantity.divide(q1, q2));
-        
-        System.out.print("\nEnter target unit for addition (" + unitOptions + "): ");
-        U targetUnit = unitParser.apply(scanner.next());
-        System.out.println("Addition (target unit): " + Quantity.add(q1, q2, targetUnit));
-        System.out.println("Subtraction (target unit): " + Quantity.subtract(q1, q2, targetUnit));
+        QuantityDTO.LengthUnit u2 = QuantityDTO.LengthUnit.valueOf(scanner.next().toUpperCase());
+
+        System.out.print("Enter target unit for arithmetic (FEET/INCHES/YARD/CENTIMETER): ");
+        QuantityDTO.LengthUnit target = QuantityDTO.LengthUnit.valueOf(scanner.next().toUpperCase());
+
+        controller.performOperations(new QuantityDTO(v1, u1), new QuantityDTO(v2, u2), target);
     }
 
+    private void handleWeight(Scanner scanner) {
+        System.out.print("\nEnter first value: ");
+        double v1 = scanner.nextDouble();
+        System.out.print("Enter first unit (KILOGRAM/GRAM/POUND): ");
+        QuantityDTO.WeightUnit u1 = QuantityDTO.WeightUnit.valueOf(scanner.next().toUpperCase());
+
+        System.out.print("Enter second value: ");
+        double v2 = scanner.nextDouble();
+        System.out.print("Enter second unit (KILOGRAM/GRAM/POUND): ");
+        QuantityDTO.WeightUnit u2 = QuantityDTO.WeightUnit.valueOf(scanner.next().toUpperCase());
+
+        System.out.print("Enter target unit for arithmetic (KILOGRAM/GRAM/POUND): ");
+        QuantityDTO.WeightUnit target = QuantityDTO.WeightUnit.valueOf(scanner.next().toUpperCase());
+
+        controller.performOperations(new QuantityDTO(v1, u1), new QuantityDTO(v2, u2), target);
+    }
+
+    private void handleVolume(Scanner scanner) {
+        System.out.print("\nEnter first value: ");
+        double v1 = scanner.nextDouble();
+        System.out.print("Enter first unit (LITRE/MILLILITRE/GALLON): ");
+        QuantityDTO.VolumeUnit u1 = QuantityDTO.VolumeUnit.valueOf(scanner.next().toUpperCase());
+
+        System.out.print("Enter second value: ");
+        double v2 = scanner.nextDouble();
+        System.out.print("Enter second unit (LITRE/MILLILITRE/GALLON): ");
+        QuantityDTO.VolumeUnit u2 = QuantityDTO.VolumeUnit.valueOf(scanner.next().toUpperCase());
+
+        System.out.print("Enter target unit for arithmetic (LITRE/MILLILITRE/GALLON): ");
+        QuantityDTO.VolumeUnit target = QuantityDTO.VolumeUnit.valueOf(scanner.next().toUpperCase());
+
+        controller.performOperations(new QuantityDTO(v1, u1), new QuantityDTO(v2, u2), target);
+    }
+
+    private void handleTemperature(Scanner scanner) {
+        System.out.print("\nEnter first value: ");
+        double v1 = scanner.nextDouble();
+        System.out.print("Enter first unit (CELSIUS/FAHRENHEIT): ");
+        QuantityDTO.TemperatureUnit u1 = QuantityDTO.TemperatureUnit.valueOf(scanner.next().toUpperCase());
+
+        System.out.print("Enter second value: ");
+        double v2 = scanner.nextDouble();
+        System.out.print("Enter second unit (CELSIUS/FAHRENHEIT): ");
+        QuantityDTO.TemperatureUnit u2 = QuantityDTO.TemperatureUnit.valueOf(scanner.next().toUpperCase());
+
+        controller.performTemperatureOperations(new QuantityDTO(v1, u1), new QuantityDTO(v2, u2));
+    }
+
+    public static void main(String[] args) {
+        Main.getInstance().run();
+    }
 }
